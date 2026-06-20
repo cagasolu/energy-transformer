@@ -1,0 +1,21 @@
+# Core deep learning
+torch>=2.0
+torchvision>=0.15
+ 
+# Numerics & scientific stack
+numpy>=1.23
+scipy>=1.10           # Kruskal-Wallis H-test (seed-stability analysis)
+scikit-learn>=1.2     # LedoitWolf shrinkage, roc_auc_score, roc_curve
+ 
+# Imaging & plotting
+Pillow>=9.0           # PIL image decoding
+matplotlib>=3.6       # loss dashboards, ROC curves, score distributions
+ 
+# Utilities
+tqdm>=4.64            # training/eval progress bars
+ 
+# Notes:
+# - Tested with Python 3.10+ and CUDA 11.7+.
+# - Install the CUDA-matched torch/torchvision build from https://pytorch.org
+#   if the default PyPI wheels do not match your GPU/driver.
+ 
