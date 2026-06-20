@@ -47,7 +47,7 @@ Instead, Selyne interprets each attention layer as a single, closed-form energy-
 The following figures show qualitative reconstruction results on BRISC2025 brain MRI (left) and STL-10 natural images (right). The model reconstructs normal patterns with high fidelity, while anomalous regions exhibit higher reconstruction error.
 
 <p align="center">
-  <img width="45%" src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_brisc_images_normal.png?raw=true" alt="BRISC2025 Reconstructions">
+  <img width="45%" src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_brisc_images_abnormal.png?raw=true" alt="BRISC2025 Reconstructions">
   <img width="45%" src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_stl_images_normal.png?raw=true" alt="STL-10 Reconstructions">
 </p>
 
