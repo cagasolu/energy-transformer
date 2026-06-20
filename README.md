@@ -59,12 +59,12 @@ The following figures show qualitative reconstruction results on the BRISC2025 b
   <table>
     <tr>
       <td align="center">
-        <img src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_brisc_images_abnormal.png?raw=true" alt="BRISC2025 Reconstructions" width="95%">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_brisc_images_abnormal.png" alt="BRISC2025 Reconstructions" width="95%">
         <br>
         <em>(a) BRISC2025 - Anomaly Reconstructions</em>
       </td>
       <td align="center">
-        <img src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_stl_images_normal.png?raw=true" alt="STL-10 Reconstructions" width="95%">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl_images_normal.png" alt="STL-10 Reconstructions" width="95%">
         <br>
         <em>(b) STL-10 - Normal Reconstructions</em>
       </td>
