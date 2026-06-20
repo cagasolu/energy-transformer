@@ -1,13 +1,15 @@
 # energy-transformer
 
-The pretrained model weights are available on Hugging Face due to their large size (∼750 MB). Download them from the repository below:
+The pretrained model weights are available on Hugging Face due to their large size (∼750 MB). 
+
+Download them from the repository below:
 Hugging Face: https://huggingface.co/cagasoluh/energy-transformer
 
 ## SELYNE: Stable-Energy Lyapunov Net with Energy-Based Attention and Mahalanobis Distance for Anomaly Detection
 
 Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention mechanism, **Gloeba** (Global Energy-Based Attention), designed to overcome the thermal-quenching instability observed in traditional energy-based models. This repository contains the official PyTorch implementation, pretrained models, and evaluation code.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.svg)](https://doi.org/10.5281/zenodo.20779017)
 
 ![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange?logo=pytorch&logoColor=white)
@@ -197,7 +199,7 @@ If you find our work useful for your research, please consider citing it:
   year         = {2026},
   publisher    = {GitHub},
   howpublished = {\url{https://github.com/cagasolu/energy-transformer}},
-  doi          = {10.5281/zenodo.19211121}
+  doi          = {10.5281/zenodo.20779017}
 }
 ```
 
@@ -208,7 +210,7 @@ This work was made possible by the computing resources and support from **Kuanka
 
 - **GitHub**: https://github.com/cagasolu/energy-transformer
 - **Hugging Face**: https://huggingface.co/cagasoluh/energy-transformer
-- **Zenodo**: https://doi.org/10.5281/zenodo.19211121
+- **Zenodo**: https://doi.org/10.5281/zenodo.20779017
 
 ---
 
