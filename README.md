@@ -55,14 +55,22 @@ The following figures show qualitative reconstruction results on the BRISC2025 b
 - BRISC2025 experiment outputs: normal (left) and abnormal (right); in both panels, each cell is a triple **(left: original, middle: reconstruction, right: difference map)**.
 - STL-10 experiment outputs: left normal and right abnormal; in both panels, each cell is a pair **(left: original, right: reconstruction)**.
 
-<p align="center">
-  <img width="45%" src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_brisc_images_abnormal.png?raw=true" alt="BRISC2025 Reconstructions">
-  <img width="45%" src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_stl_images_normal.png?raw=true" alt="STL-10 Reconstructions">
-</p>
-
-<p align="center">
-  <em>Figure: Reconstruction samples on BRISC2025 brain MRI (left) and STL-10 (right).</em>
-</p>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_brisc_images_abnormal.png?raw=true" alt="BRISC2025 Reconstructions" width="95%">
+        <br>
+        <em>(a) BRISC2025 - Anomaly Reconstructions</em>
+      </td>
+      <td align="center">
+        <img src="https://github.com/cagasolu/energy-transformer/blob/main/images/fig_stl_images_normal.png?raw=true" alt="STL-10 Reconstructions" width="95%">
+        <br>
+        <em>(b) STL-10 - Normal Reconstructions</em>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 
