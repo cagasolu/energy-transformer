@@ -3,6 +3,14 @@
 
 Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention mechanism, **Gloeba** (Global Energy-Based Attention), designed to overcome the thermal-quenching instability observed in traditional energy-based models. This repository contains the official PyTorch implementation, pretrained models, and evaluation code.
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211121.svg)](https://doi.org/10.5281/zenodo.19211121)
+
+![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange?logo=pytorch&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?logo=linux&logoColor=black)
+![CUDA](https://img.shields.io/badge/CUDA-11.8+-green?logo=nvidia&logoColor=white)
+![License](https://img.shields.io/badge/license-GPLv3-blue)
+
 ---
 
 ## Table of Contents
