@@ -3,6 +3,7 @@
 The pretrained model weights are available on Hugging Face due to their large size (∼750 MB). 
 
 Download them from the repository below:
+
 Hugging Face: https://huggingface.co/cagasoluh/energy-transformer
 
 ## SELYNE: Stable-Energy Lyapunov Net with Energy-Based Attention and Mahalanobis Distance for Anomaly Detection
