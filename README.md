@@ -35,7 +35,7 @@ Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention me
 
 ## Key Highlights
 - **Addresses Thermal Quenching**: Selyne removes the unstable MCMC sampling step inherent in classical Energy-Based Models, replacing it with a deterministic, closed-form energy minimization process.
-- **Novel Attention Mechanism**: Introduces Gloeba (Global Energy-Based Attention), which uses a learnable, per-head bilinear compatibility matrix (M_h) and an adaptive, per-head temperature (τ_h) as an out-of-equilibrium thermostat.
+- **Novel Attention Mechanism**: Introduces Gloeba (Global Energy-Based Attention), which uses a learnable, per-head bilinear compatibility matrix ($M_h$) and an adaptive, per-head temperature ($τ_h$) as an out-of-equilibrium thermostat.
 - **Robust Anomaly Detection under Severe Class Imbalance**: Achieves strong, low-variance AUROC on unsupervised anomaly detection benchmarks (STL-10 and BRISC2025) in high-anomaly-rate regimes (90% / 86%), where reconstruction-based scores typically saturate, using a Mahalanobis distance score in the latent space.
 - **Continuous Representation**: Operates directly on continuous patch embeddings, preserving the spatial geometry lost by binary latent codes in classical EBMs.
 - **Cross-Domain Transfer**: Demonstrates effective transfer of a model pretrained on natural images (Tiny ImageNet) to the medical imaging domain (brain MRI) without requiring a large medical corpus.
@@ -99,11 +99,11 @@ For each head h:
 
 - **Learnable Bilinear Compatibility**: Replaces the standard dot product with a learnable bilinear form:
 
-  `S_h = Q_h @ M_h @ K_h.T`
+  `$S_h = Q_h @ M_h @ K_h.T$`
 
   Here, M_h is a head-specific, learnable matrix that learns a non-Euclidean similarity geometry.
 
-- **Adaptive Per-Head Temperature**: Uses a learnable temperature τ_h = e^(ℓ_h), clamped to a minimum value ε. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
+- **Adaptive Per-Head Temperature**: Uses a learnable temperature $τ_h = e^(ℓ_h)$, clamped to a minimum value ε. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
 
 - **Closed-Form Energy Minimization**: The resulting softmax operation is the exact minimizer of an entropy-regularized bilinear energy, providing deterministic stability.
 
