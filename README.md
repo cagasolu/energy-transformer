@@ -99,11 +99,11 @@ For each head h:
 
 - **Learnable Bilinear Compatibility**: Replaces the standard dot product with a learnable bilinear form:
 
-  `$S_h = Q_h @ M_h @ K_h.T$`
+  $S_h = Q_h M_h K_h^\top$
 
-  Here, M_h is a head-specific, learnable matrix that learns a non-Euclidean similarity geometry.
+  Here, $M_h$ is a head-specific, learnable matrix that learns a non-Euclidean similarity geometry.
 
-- **Adaptive Per-Head Temperature**: Uses a learnable temperature $τ_h = e^(ℓ_h)$, clamped to a minimum value ε. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
+- **Adaptive Per-Head Temperature**: Uses a learnable temperature $τ_h = e^{(ℓ_h)}$, clamped to a minimum value $epsilon$. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.\
 
 - **Closed-Form Energy Minimization**: The resulting softmax operation is the exact minimizer of an entropy-regularized bilinear energy, providing deterministic stability.
 
