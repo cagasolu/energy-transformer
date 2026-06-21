@@ -103,7 +103,7 @@ For each head h:
 
   Here, $M_h$ is a head-specific, learnable matrix that learns a non-Euclidean similarity geometry.
 
-- **Adaptive Per-Head Temperature**: Uses a learnable temperature $τ_h = e^{(ℓ_h)}$, clamped to a minimum value $epsilon$. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.\
+- **Adaptive Per-Head Temperature**: Uses a learnable temperature $\tau_h = e^{ℓ_h}$, clamped to a minimum value $\epsilon$. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
 
 - **Closed-Form Energy Minimization**: The resulting softmax operation is the exact minimizer of an entropy-regularized bilinear energy, providing deterministic stability.
 
@@ -180,7 +180,7 @@ python energetic_mahal_science.py
 ---
 
 ## Results Summary
-The Selyne model demonstrates robust and stable anomaly detection performance across different domains and random seeds.
+The Selyne model demonstrates robust, stable anomaly-detection performance across domains and random seeds.
 
 | Dataset / Score Type | Mean AUROC | Stability (CV) |
 |--------------------------------|------------|----------------|
