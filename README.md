@@ -35,9 +35,7 @@ Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attentio
 4. Latent MLP
 5. Decoder
 
-Gloeba: S_h = Q_h M_h K_h^T, tau_h = e^(ell_h), clamped >= 1e-4
-
-Scoring: Reconstruction (MSE+TV+FFT+pool) + Mahalanobis (Ledoit-Wolf shrinkage)
+Scoring: Reconstruction (MSE + TV + FFT + pool) + Mahalanobis (Ledoit-Wolf shrinkage)
 
 ---
 
@@ -202,17 +200,9 @@ For GCP VM with GPU:
     Reconstruction      | 0.5270     | 0.34%
     Mahalanobis         | 0.8948     | 0.14%
 
-Per-class Mahalanobis (seed 2584):
+Per-class Mahalanobis (example seed 2584):
 
     Airplane 0.936, Bird 0.784, Car 0.961, Cat 0.848, Deer 0.902, Dog 0.871, Horse 0.912, Monkey 0.880, Ship 0.944, Truck 0.929
-
-Mean: 0.897
-
-### BRISC2025 (86% anomaly)
-
-    Score               | Mean AUROC | CV
-    Reconstruction      | 0.753      | 2.56%
-    Mahalanobis         | 0.852      | 1.71%
 
 Compute: ~43.75 GPU-hours (14 runs, A100)
 
