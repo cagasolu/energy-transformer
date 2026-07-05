@@ -147,18 +147,6 @@ Cell 6 - Run inference on your own data:
     # Untied standard
     python standard_mahal_science.py --seed 2584 --gpu 0
 
-### BRISC2025 Brain MRI
-
-    python energetic_mahal_science.py --data_dir /path/to/brain_mri
-
-### Inference on Custom Images
-
-    python predict.py --image_path /path/to/image.jpg --model checkpoints/best.pth
-
-### Export to ONNX
-
-    python export_onnx.py --model checkpoints/best.pth --output model.onnx
-
 ---
 
 ## Google Cloud Setup
@@ -242,19 +230,6 @@ Available models:
     ├── pretrain_standard_recon.py      # Untied standard pretraining
     ├── globaleba_mahalanobis.py        # STL-10 anomaly detection (tied)
     ├── standard_mahal_science.py       # STL-10 anomaly detection (untied)
-    ├── energetic_mahal_science.py      # BRISC2025 brain MRI
-    ├── predict.py                      # Inference on custom images
-    ├── export_onnx.py                  # Export to ONNX format
-    ├── models/
-    │   ├── selyne.py                   # Model architecture
-    │   ├── gloeba.py                   # Gloeba attention module
-    │   └── utils.py                    # Helper functions
-    ├── data/
-    │   ├── stl10.py                    # STL-10 dataloader
-    │   └── brisc2025.py                # BRISC2025 dataloader
-    ├── configs/
-    │   ├── selyne_config.yaml
-    │   └── training_config.yaml
     └── requirements.txt
 
 ---
@@ -277,8 +252,6 @@ Available models:
 - **GitHub:** https://github.com/cagasolu/energy-transformer
 - **Hugging Face:** https://huggingface.co/cagasoluh/energy-transformer
 - **Zenodo:** https://doi.org/10.5281/zenodo.20779017
-- **Colab Demo:** https://colab.research.google.com/github/cagasolu/energy-transformer/blob/main/energy_transformer_demo.ipynb
-- **Paper:** https://arxiv.org/abs/xxxx.xxxxx (coming soon)
 
 ---
 
