@@ -70,45 +70,133 @@ Gap localized to Bird (favors untied) and Ship (favors tied). Removing both: -0.
 
 ## Quick Start
 
-Colab:
+### Option 1: Google Colab (Recommended)
 
+Open in Colab:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cagasolu/energy-transformer/blob/main/energy_transformer_demo.ipynb)
+
+Step-by-step:
+
+    1. Open Google Colab: https://colab.research.google.com/
+    2. Go to File -> Upload Notebook or New Notebook
+    3. Run the following cells:
+
+Cell 1 - Clone repository:
+    
     !git clone https://github.com/cagasolu/energy-transformer.git
     %cd energy-transformer
+
+Cell 2 - Install dependencies:
+    
     !pip install -r requirements.txt
+
+Cell 3 - Mount Google Drive (for saving models/results):
+    
     from google.colab import drive
     drive.mount('/content/drive')
-    !python pretrain_selyne_recon.py
+    
+    # Create directory for your runs
+    !mkdir -p /content/drive/MyDrive/energy_transformer_results
 
-Local:
+Cell 4 - Download pretrained weights:
+    
+    !pip install huggingface_hub
+    from huggingface_hub import snapshot_download
+    
+    snapshot_download(
+        repo_id="cagasoluh/energy-transformer",
+        local_dir="./pretrained_weights",
+        local_dir_use_symlinks=False
+    )
+
+Cell 5 - Run training:
+    
+    # Tied Gloeba pretraining
+    !python pretrain_selyne_recon.py
+    
+    # Or for anomaly detection on STL-10
+    !python globaleba_mahalanobis.py
+
+Cell 6 - Run inference on your own data:
+    
+    !python predict.py --input /path/to/your/image --model pretrained_weights/best_model.pt
+
+### Option 2: Local Setup
 
     git clone https://github.com/cagasolu/energy-transformer.git
     cd energy-transformer
-    python -m venv venv && source venv/bin/activate
+    python -m venv venv
+    source venv/bin/activate  # Windows: venv\Scripts\activate
     pip install -r requirements.txt
 
 ---
 
 ## Usage
 
-Pretrain:
+### Pretraining
 
-    python pretrain_selyne_recon.py          # Tied Gloeba
-    python pretrain_standard_recon.py        # Untied standard
+    # Tied Gloeba (recommended)
+    python pretrain_selyne_recon.py --epochs 100 --batch_size 64
+    
+    # Untied standard (baseline)
+    python pretrain_standard_recon.py --epochs 100 --batch_size 64
 
-STL-10 Anomaly Detection:
+### STL-10 Anomaly Detection
 
-    python globaleba_mahalanobis.py          # Tied Gloeba
-    python standard_mahal_science.py         # Untied standard
+    # Tied Gloeba
+    python globaleba_mahalanobis.py --seed 2584 --gpu 0
+    
+    # Untied standard
+    python standard_mahal_science.py --seed 2584 --gpu 0
 
-BRISC2025 Brain MRI:
+### BRISC2025 Brain MRI
 
-    python energetic_mahal_science.py
+    python energetic_mahal_science.py --data_dir /path/to/brain_mri
+
+### Inference on Custom Images
+
+    python predict.py --image_path /path/to/image.jpg --model checkpoints/best.pth
+
+### Export to ONNX
+
+    python export_onnx.py --model checkpoints/best.pth --output model.onnx
+
+---
+
+## Google Cloud Setup
+
+For GCP VM with GPU:
+
+    # Create VM with GPU
+    gcloud compute instances create energy-transformer-vm \
+        --zone us-central1-a \
+        --accelerator type=nvidia-tesla-a100 \
+        --machine-type a2-highgpu-1g \
+        --image-family ubuntu-2204-lts \
+        --image-project ubuntu-os-cloud
+    
+    # SSH into VM
+    gcloud compute ssh energy-transformer-vm
+    
+    # Install CUDA and dependencies
+    sudo apt update
+    sudo apt install python3-pip python3-venv nvidia-driver-535
+    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+    
+    # Clone and install
+    git clone https://github.com/cagasolu/energy-transformer.git
+    cd energy-transformer
+    pip install -r requirements.txt
+    
+    # Run training with screen (persistent)
+    screen -S training
+    python pretrain_selyne_recon.py --gpu 0
 
 ---
 
 ## Results
 
-STL-10 (90% anomaly):
+### STL-10 (90% anomaly)
 
     Score               | Mean AUROC | CV
     Reconstruction      | 0.5270     | 0.34%
@@ -120,13 +208,64 @@ Per-class Mahalanobis (seed 2584):
 
 Mean: 0.897
 
-BRISC2025 (86% anomaly):
+### BRISC2025 (86% anomaly)
 
     Score               | Mean AUROC | CV
     Reconstruction      | 0.753      | 2.56%
     Mahalanobis         | 0.852      | 1.71%
 
 Compute: ~43.75 GPU-hours (14 runs, A100)
+
+---
+
+## Pretrained Models
+
+Download from Hugging Face:
+
+    from huggingface_hub import hf_hub_download
+    
+    # Download model weights
+    hf_hub_download(
+        repo_id="cagasoluh/energy-transformer",
+        filename="selyne_tied_best.pt",
+        local_dir="./models"
+    )
+    
+    # Download config
+    hf_hub_download(
+        repo_id="cagasoluh/energy-transformer",
+        filename="config.yaml",
+        local_dir="./models"
+    )
+
+Available models:
+- selyne_tied_best.pt (59.3M params, Tiny ImageNet pretrained)
+- selyne_untied_baseline.pt (62.1M params)
+- selyne_stl10_finetuned.pt (STL-10 fine-tuned)
+
+---
+
+## File Structure
+
+    energy-transformer/
+    ├── pretrain_selyne_recon.py        # Tied Gloeba pretraining
+    ├── pretrain_standard_recon.py      # Untied standard pretraining
+    ├── globaleba_mahalanobis.py        # STL-10 anomaly detection (tied)
+    ├── standard_mahal_science.py       # STL-10 anomaly detection (untied)
+    ├── energetic_mahal_science.py      # BRISC2025 brain MRI
+    ├── predict.py                      # Inference on custom images
+    ├── export_onnx.py                  # Export to ONNX format
+    ├── models/
+    │   ├── selyne.py                   # Model architecture
+    │   ├── gloeba.py                   # Gloeba attention module
+    │   └── utils.py                    # Helper functions
+    ├── data/
+    │   ├── stl10.py                    # STL-10 dataloader
+    │   └── brisc2025.py                # BRISC2025 dataloader
+    ├── configs/
+    │   ├── selyne_config.yaml
+    │   └── training_config.yaml
+    └── requirements.txt
 
 ---
 
@@ -145,9 +284,11 @@ Compute: ~43.75 GPU-hours (14 runs, A100)
 
 ## Links
 
-GitHub: https://github.com/cagasolu/energy-transformer
-Hugging Face: https://huggingface.co/cagasoluh/energy-transformer
-Zenodo: https://doi.org/10.5281/zenodo.20779017
+- **GitHub:** https://github.com/cagasolu/energy-transformer
+- **Hugging Face:** https://huggingface.co/cagasoluh/energy-transformer
+- **Zenodo:** https://doi.org/10.5281/zenodo.20779017
+- **Colab Demo:** https://colab.research.google.com/github/cagasolu/energy-transformer/blob/main/energy_transformer_demo.ipynb
+- **Paper:** https://arxiv.org/abs/xxxx.xxxxx (coming soon)
 
 ---
 
