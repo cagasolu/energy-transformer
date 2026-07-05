@@ -1,0 +1,1208 @@
+seed 0
+Head 10:
+  Asymmetric norm: 3.977688
+  Min eigenvalue: -0.177805
+  Max eigenvalue: 0.182309
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.963690
+  Min eigenvalue: -0.177239
+  Max eigenvalue: 0.185824
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.977542
+  Min eigenvalue: -0.183941
+  Max eigenvalue: 0.179670
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.968476
+  Min eigenvalue: -0.177703
+  Max eigenvalue: 0.170414
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.998858
+  Min eigenvalue: -0.178610
+  Max eigenvalue: 0.178027
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.941015
+  Min eigenvalue: -0.195303
+  Max eigenvalue: 0.182109
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.970480
+  Min eigenvalue: -0.183776
+  Max eigenvalue: 0.175869
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.972092
+  Min eigenvalue: -0.178850
+  Max eigenvalue: 0.176142
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.958124
+  Min eigenvalue: -0.173306
+  Max eigenvalue: 0.186450
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.985539
+  Min eigenvalue: -0.177694
+  Max eigenvalue: 0.175710
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.980398
+  Min eigenvalue: -0.186885
+  Max eigenvalue: 0.182213
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.980998
+  Min eigenvalue: -0.174167
+  Max eigenvalue: 0.186354
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 14.037714
+  Min eigenvalue: -1.504252
+  Max eigenvalue: 1.758734
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 9.568598
+  Min eigenvalue: -1.272041
+  Max eigenvalue: 1.575036
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 10.003094
+  Min eigenvalue: -1.057996
+  Max eigenvalue: 1.549369
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 11.566721
+  Min eigenvalue: -1.119306
+  Max eigenvalue: 1.365929
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 12.425031
+  Min eigenvalue: -1.240155
+  Max eigenvalue: 1.438187
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.338243
+  Min eigenvalue: -1.211063
+  Max eigenvalue: 1.713459
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 12.413946
+  Min eigenvalue: -1.254654
+  Max eigenvalue: 2.455530
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.237826
+  Min eigenvalue: -1.108248
+  Max eigenvalue: 1.593522
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 11.939500
+  Min eigenvalue: -1.195785
+  Max eigenvalue: 1.464393
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 13.648429
+  Min eigenvalue: -2.103162
+  Max eigenvalue: 2.070282
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 12.664046
+  Min eigenvalue: -1.329123
+  Max eigenvalue: 1.622266
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 13.294925
+  Min eigenvalue: -1.057492
+  Max eigenvalue: 1.860803
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+
+seed 1
+Head 10:
+  Asymmetric norm: 3.950105
+  Min eigenvalue: -0.182056
+  Max eigenvalue: 0.176144
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.954422
+  Min eigenvalue: -0.181760
+  Max eigenvalue: 0.181177
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.981921
+  Min eigenvalue: -0.178942
+  Max eigenvalue: 0.176888
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.991146
+  Min eigenvalue: -0.170419
+  Max eigenvalue: 0.178404
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.981013
+  Min eigenvalue: -0.175847
+  Max eigenvalue: 0.172895
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.962736
+  Min eigenvalue: -0.174052
+  Max eigenvalue: 0.171919
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.938955
+  Min eigenvalue: -0.185088
+  Max eigenvalue: 0.177573
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.985637
+  Min eigenvalue: -0.175311
+  Max eigenvalue: 0.176075
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.969072
+  Min eigenvalue: -0.184128
+  Max eigenvalue: 0.177994
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.963349
+  Min eigenvalue: -0.177921
+  Max eigenvalue: 0.175021
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.965888
+  Min eigenvalue: -0.177041
+  Max eigenvalue: 0.172657
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.964793
+  Min eigenvalue: -0.180652
+  Max eigenvalue: 0.191736
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 12.862731
+  Min eigenvalue: -1.389738
+  Max eigenvalue: 1.819747
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 10.321739
+  Min eigenvalue: -1.362134
+  Max eigenvalue: 1.697522
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 9.271671
+  Min eigenvalue: -1.141750
+  Max eigenvalue: 1.611369
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 10.638435
+  Min eigenvalue: -1.346593
+  Max eigenvalue: 1.735119
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 12.846891
+  Min eigenvalue: -1.122955
+  Max eigenvalue: 1.440433
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.165690
+  Min eigenvalue: -1.195195
+  Max eigenvalue: 1.149733
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 12.903864
+  Min eigenvalue: -1.250289
+  Max eigenvalue: 2.044329
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 12.013259
+  Min eigenvalue: -1.730828
+  Max eigenvalue: 1.478683
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 12.546020
+  Min eigenvalue: -1.243971
+  Max eigenvalue: 2.129181
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 12.520194
+  Min eigenvalue: -1.210565
+  Max eigenvalue: 2.149420
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 12.651476
+  Min eigenvalue: -1.332599
+  Max eigenvalue: 1.497724
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 13.227439
+  Min eigenvalue: -1.119944
+  Max eigenvalue: 1.870823
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+
+seed 42
+Head 10:
+  Asymmetric norm: 3.960099
+  Min eigenvalue: -0.185249
+  Max eigenvalue: 0.191278
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.974307
+  Min eigenvalue: -0.189215
+  Max eigenvalue: 0.178934
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.936066
+  Min eigenvalue: -0.180548
+  Max eigenvalue: 0.185012
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.972226
+  Min eigenvalue: -0.181184
+  Max eigenvalue: 0.179397
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.969534
+  Min eigenvalue: -0.183621
+  Max eigenvalue: 0.178165
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.939749
+  Min eigenvalue: -0.191193
+  Max eigenvalue: 0.175344
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.989300
+  Min eigenvalue: -0.179155
+  Max eigenvalue: 0.183039
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.980190
+  Min eigenvalue: -0.187892
+  Max eigenvalue: 0.180688
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.953691
+  Min eigenvalue: -0.182392
+  Max eigenvalue: 0.180421
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.979279
+  Min eigenvalue: -0.175260
+  Max eigenvalue: 0.182965
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.944159
+  Min eigenvalue: -0.171958
+  Max eigenvalue: 0.179379
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.975939
+  Min eigenvalue: -0.179056
+  Max eigenvalue: 0.175991
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 13.565998
+  Min eigenvalue: -1.517966
+  Max eigenvalue: 1.771454
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 10.687043
+  Min eigenvalue: -1.219884
+  Max eigenvalue: 1.571784
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 8.345410
+  Min eigenvalue: -1.100956
+  Max eigenvalue: 1.883408
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 11.174515
+  Min eigenvalue: -1.189783
+  Max eigenvalue: 1.610023
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 11.273945
+  Min eigenvalue: -1.210932
+  Max eigenvalue: 1.384423
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 12.358829
+  Min eigenvalue: -1.396336
+  Max eigenvalue: 1.148155
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 11.056117
+  Min eigenvalue: -1.106027
+  Max eigenvalue: 1.804004
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.625950
+  Min eigenvalue: -1.218254
+  Max eigenvalue: 1.673361
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 12.489994
+  Min eigenvalue: -1.363829
+  Max eigenvalue: 1.265188
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 11.731859
+  Min eigenvalue: -1.553610
+  Max eigenvalue: 1.571215
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 13.504153
+  Min eigenvalue: -1.365816
+  Max eigenvalue: 2.069142
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 12.760585
+  Min eigenvalue: -1.221298
+  Max eigenvalue: 2.143562
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+
+seed 169
+Head 10:
+  Asymmetric norm: 3.971270
+  Min eigenvalue: -0.178929
+  Max eigenvalue: 0.173896
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.968632
+  Min eigenvalue: -0.172800
+  Max eigenvalue: 0.179333
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.970698
+  Min eigenvalue: -0.190754
+  Max eigenvalue: 0.187766
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.990711
+  Min eigenvalue: -0.175440
+  Max eigenvalue: 0.183948
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.942019
+  Min eigenvalue: -0.180690
+  Max eigenvalue: 0.174964
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.961118
+  Min eigenvalue: -0.189507
+  Max eigenvalue: 0.174053
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.977474
+  Min eigenvalue: -0.179058
+  Max eigenvalue: 0.184015
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.979113
+  Min eigenvalue: -0.177743
+  Max eigenvalue: 0.174969
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.984380
+  Min eigenvalue: -0.172328
+  Max eigenvalue: 0.174149
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.982748
+  Min eigenvalue: -0.173989
+  Max eigenvalue: 0.179894
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.978454
+  Min eigenvalue: -0.173943
+  Max eigenvalue: 0.177420
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.978371
+  Min eigenvalue: -0.174906
+  Max eigenvalue: 0.176250
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 13.036990
+  Min eigenvalue: -1.921201
+  Max eigenvalue: 1.835965
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 9.960900
+  Min eigenvalue: -1.484867
+  Max eigenvalue: 1.496167
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 10.362946
+  Min eigenvalue: -1.121366
+  Max eigenvalue: 1.707719
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 11.575022
+  Min eigenvalue: -1.121985
+  Max eigenvalue: 1.435524
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 12.072484
+  Min eigenvalue: -1.401160
+  Max eigenvalue: 1.627071
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.128507
+  Min eigenvalue: -1.287052
+  Max eigenvalue: 1.593312
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 11.585093
+  Min eigenvalue: -1.252905
+  Max eigenvalue: 1.625987
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.221876
+  Min eigenvalue: -1.450266
+  Max eigenvalue: 1.459466
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 12.340666
+  Min eigenvalue: -1.399384
+  Max eigenvalue: 1.957767
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 13.545376
+  Min eigenvalue: -1.872148
+  Max eigenvalue: 1.892200
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 13.650956
+  Min eigenvalue: -1.358894
+  Max eigenvalue: 1.663357
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 12.126776
+  Min eigenvalue: -1.132063
+  Max eigenvalue: 3.154363
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+
+seed 171
+Head 10:
+  Asymmetric norm: 3.979269
+  Min eigenvalue: -0.178736
+  Max eigenvalue: 0.178067
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.960080
+  Min eigenvalue: -0.172883
+  Max eigenvalue: 0.185483
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.955034
+  Min eigenvalue: -0.184869
+  Max eigenvalue: 0.187699
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.984358
+  Min eigenvalue: -0.183556
+  Max eigenvalue: 0.177880
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.923259
+  Min eigenvalue: -0.174974
+  Max eigenvalue: 0.178413
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.953308
+  Min eigenvalue: -0.183184
+  Max eigenvalue: 0.183113
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.963817
+  Min eigenvalue: -0.174301
+  Max eigenvalue: 0.183808
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.949100
+  Min eigenvalue: -0.178802
+  Max eigenvalue: 0.184786
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.959029
+  Min eigenvalue: -0.174621
+  Max eigenvalue: 0.183626
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.968057
+  Min eigenvalue: -0.179527
+  Max eigenvalue: 0.175218
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.962966
+  Min eigenvalue: -0.181545
+  Max eigenvalue: 0.175314
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.967827
+  Min eigenvalue: -0.176593
+  Max eigenvalue: 0.178101
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 13.826588
+  Min eigenvalue: -1.585487
+  Max eigenvalue: 1.939711
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 10.179070
+  Min eigenvalue: -1.142936
+  Max eigenvalue: 1.552763
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 9.657245
+  Min eigenvalue: -1.090235
+  Max eigenvalue: 1.805438
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 10.812114
+  Min eigenvalue: -1.189765
+  Max eigenvalue: 1.834184
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 12.864620
+  Min eigenvalue: -1.060491
+  Max eigenvalue: 1.243249
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.161956
+  Min eigenvalue: -1.432193
+  Max eigenvalue: 1.170210
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 12.162987
+  Min eigenvalue: -1.388850
+  Max eigenvalue: 1.786605
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.523460
+  Min eigenvalue: -1.490800
+  Max eigenvalue: 1.887771
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 13.399378
+  Min eigenvalue: -1.270768
+  Max eigenvalue: 2.090942
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 11.938556
+  Min eigenvalue: -1.035560
+  Max eigenvalue: 1.632376
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 12.705534
+  Min eigenvalue: -1.509766
+  Max eigenvalue: 2.201404
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 13.089067
+  Min eigenvalue: -1.163978
+  Max eigenvalue: 2.077611
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+seed 1337
+Head 10:
+  Asymmetric norm: 3.977340
+  Min eigenvalue: -0.181634
+  Max eigenvalue: 0.180155
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.977277
+  Min eigenvalue: -0.181721
+  Max eigenvalue: 0.174875
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.975749
+  Min eigenvalue: -0.179724
+  Max eigenvalue: 0.178557
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.959758
+  Min eigenvalue: -0.183493
+  Max eigenvalue: 0.175486
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.955856
+  Min eigenvalue: -0.183654
+  Max eigenvalue: 0.179699
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.951188
+  Min eigenvalue: -0.182676
+  Max eigenvalue: 0.176444
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.970531
+  Min eigenvalue: -0.182597
+  Max eigenvalue: 0.177580
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.978439
+  Min eigenvalue: -0.173744
+  Max eigenvalue: 0.185954
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.955688
+  Min eigenvalue: -0.172857
+  Max eigenvalue: 0.188465
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.913984
+  Min eigenvalue: -0.180872
+  Max eigenvalue: 0.190841
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.946798
+  Min eigenvalue: -0.181916
+  Max eigenvalue: 0.180821
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.973367
+  Min eigenvalue: -0.178757
+  Max eigenvalue: 0.180163
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 13.468214
+  Min eigenvalue: -1.611450
+  Max eigenvalue: 1.857519
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 10.049314
+  Min eigenvalue: -1.178018
+  Max eigenvalue: 1.645015
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 10.093634
+  Min eigenvalue: -1.169606
+  Max eigenvalue: 1.831115
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 10.913650
+  Min eigenvalue: -1.332128
+  Max eigenvalue: 1.281729
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 12.398237
+  Min eigenvalue: -1.059138
+  Max eigenvalue: 1.351636
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.316163
+  Min eigenvalue: -1.382570
+  Max eigenvalue: 1.566449
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 12.325133
+  Min eigenvalue: -1.147982
+  Max eigenvalue: 1.631845
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.814424
+  Min eigenvalue: -1.466517
+  Max eigenvalue: 1.716053
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 11.740130
+  Min eigenvalue: -1.259199
+  Max eigenvalue: 2.033350
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 13.456173
+  Min eigenvalue: -1.315399
+  Max eigenvalue: 1.952588
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 12.675004
+  Min eigenvalue: -1.348305
+  Max eigenvalue: 1.945914
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 13.606562
+  Min eigenvalue: -1.491138
+  Max eigenvalue: 2.032534
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+
+seed 10000
+Head 10:
+  Asymmetric norm: 3.996110
+  Min eigenvalue: -0.191502
+  Max eigenvalue: 0.180285
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 3.963851
+  Min eigenvalue: -0.182998
+  Max eigenvalue: 0.183090
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 3.956972
+  Min eigenvalue: -0.181194
+  Max eigenvalue: 0.173178
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 3.970515
+  Min eigenvalue: -0.180969
+  Max eigenvalue: 0.177629
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 3.964860
+  Min eigenvalue: -0.177232
+  Max eigenvalue: 0.188969
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 3.964254
+  Min eigenvalue: -0.177250
+  Max eigenvalue: 0.180790
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 3.982728
+  Min eigenvalue: -0.180006
+  Max eigenvalue: 0.182440
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 3.987509
+  Min eigenvalue: -0.172416
+  Max eigenvalue: 0.175015
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 3.958323
+  Min eigenvalue: -0.174488
+  Max eigenvalue: 0.173500
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 3.988496
+  Min eigenvalue: -0.176117
+  Max eigenvalue: 0.179280
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 3.942551
+  Min eigenvalue: -0.177993
+  Max eigenvalue: 0.176833
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 3.962113
+  Min eigenvalue: -0.183894
+  Max eigenvalue: 0.176290
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+
+After Training, Tied Gloeba Territory Analysis:
+Head 10:
+  Asymmetric norm: 13.370759
+  Min eigenvalue: -1.448369
+  Max eigenvalue: 1.819334
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 27:
+  Asymmetric norm: 9.920665
+  Min eigenvalue: -1.407501
+  Max eigenvalue: 1.538288
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 44:
+  Asymmetric norm: 10.103912
+  Min eigenvalue: -1.256934
+  Max eigenvalue: 1.620850
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 61:
+  Asymmetric norm: 11.473051
+  Min eigenvalue: -1.054875
+  Max eigenvalue: 1.853574
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 78:
+  Asymmetric norm: 11.231963
+  Min eigenvalue: -1.115726
+  Max eigenvalue: 1.697386
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 95:
+  Asymmetric norm: 11.704245
+  Min eigenvalue: -1.247272
+  Max eigenvalue: 1.266307
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 134:
+  Asymmetric norm: 11.992968
+  Min eigenvalue: -1.372443
+  Max eigenvalue: 1.894526
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 151:
+  Asymmetric norm: 11.806966
+  Min eigenvalue: -1.343339
+  Max eigenvalue: 1.286510
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 168:
+  Asymmetric norm: 11.284264
+  Min eigenvalue: -1.345003
+  Max eigenvalue: 1.513279
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 185:
+  Asymmetric norm: 12.946738
+  Min eigenvalue: -1.270424
+  Max eigenvalue: 1.941007
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 202:
+  Asymmetric norm: 14.129817
+  Min eigenvalue: -1.504242
+  Max eigenvalue: 1.952068
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
+Head 219:
+  Asymmetric norm: 12.488600
+  Min eigenvalue: -1.442296
+  Max eigenvalue: 1.941216
+  In Sym_+: False
+  Territory: asymmetric + indefinite (krein space)
+
