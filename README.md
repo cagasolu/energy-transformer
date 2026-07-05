@@ -1,6 +1,6 @@
 # energy-transformer
 
-Pretrained weights (~750 MB): https://huggingface.co/cagasoluh/energy-transformer
+Pretrained weights (~1 GB): https://huggingface.co/cagasoluh/energy-transformer
 
 ---
 
