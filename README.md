@@ -1,16 +1,18 @@
 # energy-transformer
 
-The pretrained model weights are available on Hugging Face due to their large size (∼750 MB). 
+The pretrained model weights are available on Hugging Face due to their large size (∼1 GB).
 
 Download them from the repository below:
 
-Hugging Face: https://huggingface.co/cagasoluh/energy-transformer
+**Hugging Face**: https://huggingface.co/cagasoluh/energy-transformer
 
-## SELYNE: Stable-Energy Lyapunov Net with Energy-Based Attention and Mahalanobis Distance for Anomaly Detection
+---
 
-Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention mechanism, **Gloeba** (Global Energy-Based Attention), designed to overcome the thermal-quenching instability observed in traditional energy-based models. This repository contains the official PyTorch implementation, pretrained models, and evaluation code.
+## SELYNE: Stable-Energy Lipschitz Network with Energy-Based Attention for Anomaly Detection
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.svg)](https://doi.org/10.5281/zenodo.20779017)
+Selyne (Stable-Energy Lipschitz Net) introduces a novel energy-based attention mechanism, **Gloeba** (Global Energy-Based Attention), designed to overcome the thermal-quenching instability observed in traditional energy-based models. This repository contains the official PyTorch implementation, pretrained models, and evaluation code.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20779017.svg)](https://doi.org/10.5281/zenodo.20779017)
 
 ![Python](https://img.shields.io/badge/python-3.10-blue?logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange?logo=pytorch&logoColor=white)
@@ -24,6 +26,7 @@ Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention me
 - [Key Highlights](#key-highlights)
 - [Overview](#overview)
 - [Core Concepts & Architecture](#core-concepts--architecture)
+- [Ablation: Tied Gloeba vs. Untied Standard](#ablation-tied-gloeba-vs-untied-standard)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [Results Summary](#results-summary)
@@ -35,39 +38,57 @@ Selyne (Stable-Energy Lyapunov Net) introduces a novel energy-based attention me
 
 ## Key Highlights
 - **Addresses Thermal Quenching**: Selyne removes the unstable MCMC sampling step inherent in classical Energy-Based Models, replacing it with a deterministic, closed-form energy minimization process.
-- **Novel Attention Mechanism**: Introduces Gloeba (Global Energy-Based Attention), which uses a learnable, per-head bilinear compatibility matrix ($M_h$) and an adaptive, per-head temperature ($τ_h$) as an out-of-equilibrium thermostat.
-- **Robust Anomaly Detection under Severe Class Imbalance**: Achieves strong, low-variance AUROC on unsupervised anomaly detection benchmarks (STL-10 and BRISC2025) in high-anomaly-rate regimes (90% / 86%), where reconstruction-based scores typically saturate, using a Mahalanobis distance score in the latent space.
+- **Novel Attention Mechanism**: Introduces Gloeba (Global Energy-Based Attention), which uses a learnable, per-head bilinear compatibility matrix ($M_h$) and an adaptive, per-head temperature ($\tau_h$) as an out-of-equilibrium thermostat.
+- **Theoretical Guarantees**: Gloeba's attention map is Lipschitz-bounded (Proposition 4), preventing the frozen, gradient-starved attention that constant low-temperature sampling produces.
+- **Representational Expansion**: Under weight tying, Gloeba's $M_h$ reaches asymmetric and indefinite compatibility patterns beyond the positive-semidefinite cone that confines standard attention (Proposition 5).
+- **Robust Anomaly Detection**: Achieves stable, low-variance AUROC on unsupervised anomaly detection benchmarks (STL-10) under a 90% anomaly-rate regime, using a Ledoit-Wolf-shrunken Mahalanobis distance in the latent space.
+- **Parameter Efficiency**: Tied Gloeba achieves higher Tiny ImageNet pretraining accuracy with 4.4% fewer parameters than untied standard attention (59.3M vs. 62.1M parameters).
 - **Continuous Representation**: Operates directly on continuous patch embeddings, preserving the spatial geometry lost by binary latent codes in classical EBMs.
-- **Cross-Domain Transfer**: Demonstrates effective transfer of a model pretrained on natural images (Tiny ImageNet) to the medical imaging domain (brain MRI) without requiring a large medical corpus.
 
 ---
 
 ## Overview
-Classical Energy-Based Models (EBMs), such as Restricted Boltzmann Machines (RBMs), learn data distributions via Gibbs or Langevin sampling. A critical flaw is thermal quenching: with a fixed sampling temperature in a changing energy landscape, the sampler can freeze in local modes, leading to unstable training and poor gradient estimates. Selyne addresses this by eliminating the sampler entirely.
+Classical Energy-Based Models (EBMs), such as Restricted Boltzmann Machines (RBMs), learn data distributions via Gibbs or Langevin sampling. A critical flaw is **thermal quenching**: with a fixed sampling temperature in a changing energy landscape, the sampler can freeze in local modes, leading to unstable training and poor gradient estimates. Selyne addresses this by eliminating the sampler entirely.
 
 Instead, Selyne interprets each attention layer as a single, closed-form energy-minimization step on continuous patch embeddings. This is achieved through its core component, Gloeba, which provides a stable, learnable, and non-equilibrium thermodynamic regulation.
 
----
-
 ### Sample Reconstructions
 
-The following figures show qualitative reconstruction results on the BRISC2025 brain MRI (left) and the STL-10 natural images (right). 
+The following figures show qualitative reconstruction results on STL-10 natural images for both tied Gloeba and untied standard attention.
 
-- BRISC2025 experiment outputs: normal (left) and abnormal (right); in both panels, each cell is a triple **(left: original, middle: reconstruction, right: difference map)**.
-- STL-10 experiment outputs: left normal and right abnormal; in both panels, each cell is a pair **(left: original, right: reconstruction)**.
+**Tied Gloeba (Selyne):**
 
 <div align="center">
   <table>
     <tr>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_brisc_images_abnormal.png" alt="BRISC2025 Reconstructions" width="95%">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl10_images_normal.png" alt="STL-10 Normal Reconstructions (Tied)" width="95%">
         <br>
-        <em>(a) BRISC2025 - Anomaly Reconstructions</em>
+        <em>(a) STL-10 - Normal Samples (Tied Gloeba)</em>
       </td>
       <td align="center">
-        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl_images_normal.png" alt="STL-10 Reconstructions" width="95%">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl10_images_abnormal.png" alt="STL-10 Anomaly Reconstructions (Tied)" width="95%">
         <br>
-        <em>(b) STL-10 - Normal Reconstructions</em>
+        <em>(b) STL-10 - Anomaly Samples (Tied Gloeba)</em>
+      </td>
+    </tr>
+  </table>
+</div>
+
+**Untied Standard Attention (Baseline):**
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl10_us_images_normal.png" alt="STL-10 Normal Reconstructions (Untied)" width="95%">
+        <br>
+        <em>(c) STL-10 - Normal Samples (Untied Standard)</em>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/cagasolu/energy-transformer/main/images/fig_stl10_us_images_abnormal.png" alt="STL-10 Anomaly Reconstructions (Untied)" width="95%">
+        <br>
+        <em>(d) STL-10 - Anomaly Samples (Untied Standard)</em>
       </td>
     </tr>
   </table>
@@ -103,15 +124,63 @@ For each head h:
 
   Here, $M_h$ is a head-specific, learnable matrix that learns a non-Euclidean similarity geometry.
 
-- **Adaptive Per-Head Temperature**: Uses a learnable temperature $\tau_h = e^{ℓ_h}$, clamped to a minimum value $\epsilon$. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
+- **Adaptive Per-Head Temperature**: Uses a learnable temperature $\tau_h = e^{\ell_h}$, clamped to a minimum value $\epsilon = 10^{-4}$. This acts as a thermostat, adaptively controlling the sharpness/softness of the attention and preventing quenching.
+
+- **Lipschitz-Bounded Sensitivity**: The clamp $\tau_h \ge \epsilon$ ensures the attention map is Lipschitz with constant at most $1/(2\epsilon)$, providing a stability guarantee (Proposition 4).
 
 - **Closed-Form Energy Minimization**: The resulting softmax operation is the exact minimizer of an entropy-regularized bilinear energy, providing deterministic stability.
 
 ### The Latent Mahalanobis Scoring
 After fine-tuning, anomaly detection is performed using two scores:
 
-- **Reconstruction Energy Score**: A pixel-wise reconstruction error.
+- **Reconstruction Energy Score**: A pixel-wise reconstruction error (MSE + TV + FFT + pooled error).
 - **Mahalanobis Distance (Primary)**: A distance metric in the latent space. A Ledoit-Wolf shrinkage covariance is estimated from the normal training data. The Mahalanobis distance of a new sample is then computed, with anomalies lying further from the normal distribution's mean.
+
+---
+
+## Ablation: Tied Gloeba vs. Untied Standard
+
+We compare tied Gloeba against untied standard attention, the strongest standard variant. The key architectural differences are:
+
+| Component | Untied Standard | Tied Gloeba |
+|-----------|-----------------|-------------|
+| Q/K Projections | $W_Q, W_K$ independent | $W_Q = W_K = W$ |
+| Kernel $A_h$ | $W_Q W_K^\top$ | $W M_h W^\top$ |
+| Reachable forms | Full rank-≤$D_h$ | $\mathbb{R}^{D_h \times D_h}$ |
+| Temperature | $1/\sqrt{D_h}$ (fixed) | $e^{\ell_h}$ (learnable) |
+| Parameters per block | 1,050,624 | 820,752 |
+| Total parameters | 62,053,386 | **59,294,922** |
+
+### Pretraining Performance (7 seeds, Tiny ImageNet)
+
+| Metric | Tied Gloeba | Untied Standard | Δ |
+|--------|-------------|-----------------|---|
+| Best val. accuracy (mean ± std) | 0.5650 ± 0.005 | 0.5594 ± 0.003 | +0.0056 (p=0.011) |
+| Best val. accuracy (max) | 0.572 | 0.563 | +0.0090 |
+| Total parameters | **59,294,922** | 62,053,386 | -2,758,464 |
+| Training time (per run) | 3.3 h | **2.95 h** | +0.35 h |
+
+**Key finding**: Tied Gloeba achieves higher accuracy with 4.4% fewer parameters, at the cost of ~24 additional minutes per run.
+
+### Anomaly Detection Performance (STL-10, 7 seeds)
+
+| Metric | Tied Gloeba | Untied Standard | Δ (p-value) | $d_z$ |
+|--------|-------------|-----------------|-------------|-------|
+| Mahalanobis AUROC | 0.8948 | **0.8974** | +0.0027 (0.0029) | 1.82 |
+| Reconstruction AUROC | 0.5270 | **0.5286** | +0.0016 (0.070) | 0.83 |
+
+**Key finding**: The two variants are practically equivalent detectors. The small aggregate Mahalanobis gap (+0.0027) traces to just two classes pulling opposite ways: Bird favors untied (+0.0410), Ship favors tied (-0.0131). Removing both outliers erases the difference (-0.0002, p=0.71).
+
+### Leave-One-Class-Out Sensitivity
+
+| Removed | Δ (U−T) | p | Favors |
+|---------|---------|---|--------|
+| None (all 10) | +0.0027 | 0.0029 | Untied (7/7) |
+| − Bird | **−0.0016** | 0.0025 | **Tied (7/7)** |
+| − Ship | +0.0044 | 0.0006 | Untied (7/7) |
+| − both | −0.0002 | 0.709 | n.s. |
+
+**Conclusion**: Tied Gloeba matches the untied standard on detection while pretraining better with fewer parameters. The differences are localized to two outlier classes.
 
 ---
 
@@ -126,101 +195,6 @@ After fine-tuning, anomaly detection is performed using two scores:
 ### Installation
 
 Clone the repository:
-```
+```bash
 git clone https://github.com/cagasolu/energy-transformer.git
 cd energy-transformer
-```
-
-Set up a virtual environment (recommended):
-```
-python -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
-```
-
-Install dependencies:
-```
-pip install -r requirements.txt
-```
-
-### Dataset Preparation
-- **Tiny ImageNet**: The script pretrain_selyne_recon.py will automatically download and use the dataset if it's not found. You can also place it in a ./data directory.
-- **STL-10**: The globaleba_mahalanobis.py script will download it automatically via torchvision.
-- **BRISC2025**: You need to download the dataset from its source. Ensure the directory structure matches the script's expectations (e.g., train/no_tumor, test/no_tumor, test/glioma, etc.)
-
----
-
-## Usage
-
-**Important**: Before running any script, ensure you have downloaded the pretrained model files (.pt files) from the Hugging Face repository or Zenodo and placed them in the project root directory. Alternatively, you can train your own model.
-
-### 1. Pretraining on Tiny ImageNet
-This stage trains the full Selyne model from scratch on the Tiny ImageNet classification task.
-```
-python pretrain_selyne_recon.py
-```
-- This will run for up to 72 epochs.
-- The best checkpoint (pretrained_selyne_full_recon_best.pt) and final checkpoint (pretrained_selyne_full_recon.pt) will be saved.
-
-### 2. Anomaly Detection on STL-10
-This script evaluates the model on the unsupervised anomaly detection task using the STL-10 dataset. It treats each of the 10 classes as the "normal" class in turn.
-```
-python globaleba_mahalanobis.py
-```
-- The script will automatically load the pretrained checkpoint, fine-tune the model for each class, and compute both Energy and Mahalanobis AUROC scores.
-- The results (AUROC bar charts, ROC curves, score distributions) and sample reconstructions will be saved in the project directory.
-
-### 3. Anomaly Detection on BRISC2025 Brain MRI
-This script evaluates the model's ability to detect brain tumors. It treats the "no_tumor" class as normal and all tumor types (glioma, meningioma, pituitary) as anomalies.
-```
-python energetic_mahal_science.py
-```
-- The script loads the pretrained checkpoint, fine-tunes the model, and computes Energy and Mahalanobis AUROC scores.
-- It also saves side-by-side reconstructions with difference maps for qualitative analysis.
-
----
-
-## Results Summary
-The Selyne model demonstrates robust, stable anomaly-detection performance across domains and random seeds.
-
-| Dataset / Score Type | Mean AUROC | Stability (CV) |
-|--------------------------------|------------|----------------|
-| STL-10 (90% Anomaly) / Energy (Reconstruction) | 0.517 | 0.45% |
-| STL-10 (90% Anomaly) / Mahalanobis (Latent) | 0.891 | 0.06% |
-| BRISC2025 (86% Anomaly) / Energy (Reconstruction) | 0.753 | 2.56% |
-| BRISC2025 (86% Anomaly) / Mahalanobis (Latent) | 0.852 | 1.71% |
-
-**Key takeaway**: The latent Mahalanobis score provides a highly discriminative and stable signal for anomaly detection, significantly outperforming the reconstruction energy score, which saturates due to the model's high reconstruction fidelity.
-
----
-
-## License
-This project is licensed under the GNU General Public License v3.0. See the LICENSE file for more details.
-
----
-
-## Citation
-If you find our work useful for your research, please consider citing it:
-
-```bibtex
-@misc{suleymanoglu2026selyne,
-  author       = {Süleymanoğlu, Görkem Can},
-  title        = {Selyne: Stable-Energy Lyapunov Net with Energy-Based Attention for Anomaly Detection},
-  year         = {2026},
-  publisher    = {GitHub},
-  howpublished = {\url{https://github.com/cagasolu/energy-transformer}},
-  doi          = {10.5281/zenodo.20779017}
-}
-```
-
----
-
-## Acknowledgements
-This work was made possible by the computing resources and support from **Kuanka Publishing LLC**. The code is available on:
-
-- **GitHub**: https://github.com/cagasolu/energy-transformer
-- **Hugging Face**: https://huggingface.co/cagasoluh/energy-transformer
-- **Zenodo**: https://doi.org/10.5281/zenodo.20779017
-
----
-
-**Note**: For the most up-to-date information, please refer to the code repository directly.
