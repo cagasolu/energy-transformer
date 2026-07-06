@@ -17,7 +17,7 @@ Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attentio
 
 ## Environment Note
 
-The pretraining scripts are published and ready to run on Google systems (Colab / Google Cloud), with Google Drive mounting for saving models and results. The fine-tuning scripts are configured for local GPUs. All file paths are set to these defaults; anyone can freely change them to fit their own environment.
+The pretraining scripts are published and ready to run on Google systems (Colab / Google Cloud), with Google Drive mounting for saving models and results. The fine-tuning scripts are configured for local GPUs. All file paths are set to these defaults; anyone can change them to suit their environment.
 
 ---
 
@@ -125,6 +125,33 @@ Cell 5 - Run pretraining:
     python -m venv venv
     source venv/bin/activate  # Windows: venv\Scripts\activate
     pip install -r requirements.txt
+
+---
+
+## Example Outputs
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/cagasolu/energy-transformer/blob/main/ablation_figures/fig_stl10_images_normal.png?raw=true" target="_blank">
+          <img src="https://github.com/cagasolu/energy-transformer/blob/main/ablation_figures/fig_stl10_images_normal.png?raw=true" alt="Normal" width="400"/>
+        </a>
+        <br />
+        <b>Normal</b>
+      </td>
+      <td align="center">
+        <a href="https://github.com/cagasolu/energy-transformer/blob/main/ablation_figures/fig_stl10_images_abnormal.png?raw=true" target="_blank">
+          <img src="https://github.com/cagasolu/energy-transformer/blob/main/ablation_figures/fig_stl10_images_abnormal.png?raw=true" alt="Abnormal" width="400"/>
+        </a>
+        <br />
+        <b>Abnormal</b>
+      </td>
+    </tr>
+  </table>
+</div>
+
+**Figure 1:** STL-10 experiment for Selyne with tied Gloeba (12 x 10 output): left normal, middle difference, right abnormal; in both panels, each cell is a triple (left: original, middle: difference, right: reconstruction).
 
 ---
 
