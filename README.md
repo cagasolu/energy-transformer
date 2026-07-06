@@ -6,9 +6,9 @@ Pretrained weights (~1 GB): https://huggingface.co/cagasoluh/energy-transformer
 
 ## SELYNE
 
-Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attention mechanism that eliminates MCMC sampling and thermal quenching. Official PyTorch implementation.
+Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attention mechanism that eliminates the need for MCMC sampling and thermal quenching. Official PyTorch implementation.
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20779017.svg)](https://doi.org/10.5281/zenodo.20779017)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.svg)](https://doi.org/10.5281/zenodo.20779017)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange)
 ![License](https://img.shields.io/badge/license-GPLv3-blue)
@@ -17,7 +17,7 @@ Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attentio
 
 ## Environment Note
 
-The pretraining scripts are published ready to run on Google systems (Colab / Google Cloud), with Google Drive mounting for saving models and results. The fine-tuning scripts are configured for local GPUs. All file paths are set for these defaults; anyone can freely change the paths to fit their own environment.
+The pretraining scripts are published and ready to run on Google systems (Colab / Google Cloud), with Google Drive mounting for saving models and results. The fine-tuning scripts are configured for local GPUs. All file paths are set to these defaults; anyone can freely change them to fit their own environment.
 
 ---
 
