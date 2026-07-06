@@ -151,7 +151,7 @@ Cell 5 - Run pretraining:
   </table>
 </div>
 
-**Figure 1:** STL-10 experiment for Selyne with tied Gloeba (12 x 10 output): left normal, middle difference, right abnormal; in both panels, each cell is a triple (left: original, middle: difference, right: reconstruction).
+**Figure 1:** STL-10 experiment for Selyne with tied Gloeba (12x10 output): left normal, right abnormal; in both panels (separate for the first 6x10 and the second 6x10), each cell is a triple (left: original, middle: difference, right: reconstruction).
 
 ---
 
