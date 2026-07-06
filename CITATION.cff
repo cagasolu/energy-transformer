@@ -1,13 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "Selyne: Stable-Energy Lyapunov Net with Energy-Based Attention for Anomaly Detection"
-abstract: >-
-  Selyne (Stable-Energy Lyapunov Net) is an energy-based Transformer that removes
-  the MCMC sampler of classical energy-based models and reads each attention layer
-  as a single closed-form energy-minimization step. Its core mechanism, Gloeba
-  (Global Energy-Based Attention), replaces the scaled dot product with a learnable
-  per-head bilinear compatibility and an adaptive per-head temperature, and it is
-  applied to one-class anomaly detection on STL-10 and BRISC2025.
+title: "Selyne: Stable-Energy Lipschitz Net with Energy-Based Attention for Anomaly Detection"
 type: software
 authors:
   - family-names: "Süleymanoğlu"
@@ -31,4 +24,3 @@ keywords:
   - mahalanobis distance
   - tiny imagenet
   - stl-10
-  - brain tumor mri
