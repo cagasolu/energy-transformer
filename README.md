@@ -15,12 +15,18 @@ Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attentio
 
 ---
 
+## Environment Note
+
+The pretraining scripts are published ready to run on Google systems (Colab / Google Cloud), with Google Drive mounting for saving models and results. The fine-tuning scripts are configured for local GPUs. All file paths are set for these defaults; anyone can freely change the paths to fit their own environment.
+
+---
+
 ## Key Highlights
 
 - Removes MCMC sampling from EBMs; closed-form energy minimization
 - Gloeba: learnable bilinear compatibility M_h + adaptive temperature tau_h
-- Lipschitz-bounded attention (Proposition 4)
-- Expands representable forms beyond PSD cone (Proposition 5)
+- Lipschitz-bounded attention (bounded-sensitivity guarantee)
+- Expands representable forms beyond the PSD cone (tied non-absorbability)
 - 59.3M params, 4.4% fewer than untied standard, higher accuracy
 - Mahalanobis AUROC: 0.895 on STL-10 (90% anomaly rate)
 - Google Cloud / Colab ready with auto Drive mounting
@@ -43,9 +49,9 @@ Scoring: Reconstruction (MSE + TV + FFT + pool) + Mahalanobis (Ledoit-Wolf shrin
 
 | Component | Untied | Tied Gloeba |
 |-----------|--------|-------------|
-| Q/K | W_Q, W_K | W_Q = W_K = W |
-| Kernel | W_Q W_K^T | W M_h W^T |
-| Params | 62.1M | 59.3M |
+| $Q/K$ | $W_Q$, $W_K$ | $W_Q$ = $W_K$ = $W$ |
+| Kernel | $W_Q W_K^T$ | $W M_h W^T$ |
+| Params | $62.1M$ | $59.3M$ |
 
 Pretraining (7 seeds, Tiny ImageNet):
 
@@ -62,64 +68,57 @@ STL-10 (7 seeds):
 | Mahalanobis AUROC | 0.8948 | 0.8974 | +0.0027 |
 | Reconstruction AUROC | 0.5270 | 0.5286 | +0.0016 |
 
-Gap localized to Bird (favors untied) and Ship (favors tied). Removing both: -0.0002, p=0.71 -> practically equivalent detectors.
+Gap localized to Bird (favors untied) and Ship (favors tied). Removing both -0.0002 and p=0.71 -> practically equivalent detectors.
 
 ---
 
 ## Quick Start
 
-### Option 1: Google Colab (Recommended)
-
-Open in Colab:
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cagasolu/energy-transformer/blob/main/energy_transformer_demo.ipynb)
+### Option 1: Google Colab (Recommended for pretraining)
 
 Step-by-step:
 
     1. Open Google Colab: https://colab.research.google.com/
-    2. Go to File -> Upload Notebook or New Notebook
+    2. Go to File -> New Notebook
     3. Run the following cells:
 
 Cell 1 - Clone repository:
-    
+
     !git clone https://github.com/cagasolu/energy-transformer.git
     %cd energy-transformer
 
 Cell 2 - Install dependencies:
-    
+
     !pip install -r requirements.txt
 
 Cell 3 - Mount Google Drive (for saving models/results):
-    
+
     from google.colab import drive
     drive.mount('/content/drive')
-    
-    # Create directory for your runs
+
+    # Create a directory for your runs
     !mkdir -p /content/drive/MyDrive/energy_transformer_results
 
 Cell 4 - Download pretrained weights:
-    
+
     !pip install huggingface_hub
     from huggingface_hub import snapshot_download
-    
+
     snapshot_download(
         repo_id="cagasoluh/energy-transformer",
         local_dir="./pretrained_weights",
         local_dir_use_symlinks=False
     )
 
-Cell 5 - Run training:
-    
+Cell 5 - Run pretraining:
+
     # Tied Gloeba pretraining
     !python pretrain_selyne_recon.py
-    
-    # Or for anomaly detection on STL-10
-    !python globaleba_mahalanobis.py
 
-Cell 6 - Run inference on your own data:
-    
-    !python predict.py --input /path/to/your/image --model pretrained_weights/best_model.pt
+    # Untied standard pretraining (baseline)
+    !python pretrain_standard_recon.py
 
-### Option 2: Local Setup
+### Option 2: Local Setup (for fine-tuning / anomaly detection)
 
     git clone https://github.com/cagasolu/energy-transformer.git
     cd energy-transformer
@@ -131,21 +130,21 @@ Cell 6 - Run inference on your own data:
 
 ## Usage
 
-### Pretraining
+### Pretraining (Google / Colab)
 
     # Tied Gloeba (recommended)
-    python pretrain_selyne_recon.py --epochs 100 --batch_size 64
-    
-    # Untied standard (baseline)
-    python pretrain_standard_recon.py --epochs 100 --batch_size 64
+    python pretrain_selyne_recon.py
 
-### STL-10 Anomaly Detection
+    # Untied standard (baseline)
+    python pretrain_standard_recon.py
+
+### STL-10 Anomaly Detection (local GPU)
 
     # Tied Gloeba
     python globaleba_mahalanobis.py --seed 2584 --gpu 0
-    
+
     # Untied standard
-    python standard_mahal_science.py --seed 2584 --gpu 0
+    python standard_mahalanobis.py --seed 2584 --gpu 0
 
 ---
 
@@ -160,23 +159,23 @@ For GCP VM with GPU:
         --machine-type a2-highgpu-1g \
         --image-family ubuntu-2204-lts \
         --image-project ubuntu-os-cloud
-    
+
     # SSH into VM
     gcloud compute ssh energy-transformer-vm
-    
+
     # Install CUDA and dependencies
     sudo apt update
     sudo apt install python3-pip python3-venv nvidia-driver-535
     pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-    
+
     # Clone and install
     git clone https://github.com/cagasolu/energy-transformer.git
     cd energy-transformer
     pip install -r requirements.txt
-    
+
     # Run training with screen (persistent)
     screen -S training
-    python pretrain_selyne_recon.py --gpu 0
+    python pretrain_selyne_recon.py
 
 ---
 
@@ -200,46 +199,34 @@ Compute: ~43.75 GPU-hours (14 runs, A100)
 
 Download from Hugging Face:
 
-    from huggingface_hub import hf_hub_download
-    
-    # Download model weights
-    hf_hub_download(
+    from huggingface_hub import snapshot_download
+
+    snapshot_download(
         repo_id="cagasoluh/energy-transformer",
-        filename="selyne_tied_best.pt",
-        local_dir="./models"
-    )
-    
-    # Download config
-    hf_hub_download(
-        repo_id="cagasoluh/energy-transformer",
-        filename="config.yaml",
-        local_dir="./models"
+        local_dir="./pretrained_weights",
+        local_dir_use_symlinks=False
     )
 
-Available models:
-- selyne_tied_best.pt (59.3M params, Tiny ImageNet pretrained)
-- selyne_untied_baseline.pt (62.1M params)
-- selyne_stl10_finetuned.pt (STL-10 fine-tuned)
+The repository hosts the pretrained tied Gloeba and untied standard weights along with their STL-10 fine-tuned checkpoints. See the Hugging Face repo file list for exact filenames before downloading individual files.
 
 ---
 
 ## File Structure
 
     energy-transformer/
-    ├── pretrain_selyne_recon.py        # Tied Gloeba pretraining
-    ├── pretrain_standard_recon.py      # Untied standard pretraining
-    ├── globaleba_mahalanobis.py        # STL-10 anomaly detection (tied)
-    ├── standard_mahal_science.py       # STL-10 anomaly detection (untied)
+    ├── pretrain_selyne_recon.py        # Tied Gloeba pretraining (Google / Colab)
+    ├── pretrain_standard_recon.py      # Untied standard pretraining (Google / Colab)
+    ├── globaleba_mahalanobis.py        # STL-10 anomaly detection, tied (local GPU)
+    ├── standard_mahalanobis.py         # STL-10 anomaly detection, untied (local GPU)
     └── requirements.txt
 
 ---
 
 ## Citation
 
-    @misc{suleymanoglu2026selyne,
+    @misc{suleymanoglu_selyne,
       author = {Suleymanoglu, Gorkem Can},
       title = {Selyne: Stable-Energy Lipschitz Network with Energy-Based Attention for Anomaly Detection},
-      year = {2026},
       publisher = {GitHub},
       url = {https://github.com/cagasolu/energy-transformer},
       doi = {10.5281/zenodo.20779017}
