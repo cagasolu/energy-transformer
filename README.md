@@ -261,14 +261,27 @@ The repository hosts the pretrained tied Gloeba and untied standard weights alon
 
 ---
 
+## License
+
+SELYNE is **dual-licensed**.
+
+**Open source (GPLv3).** Free to use, modify, and distribute under the terms of the GNU General Public License v3.0. If you distribute software that incorporates SELYNE, your work must also be released under GPLv3.
+
+**Commercial license.** If you cannot comply with GPLv3 — for example, if you need to embed SELYNE in a proprietary product, ship it in a closed-source device, or distribute it without releasing your own source — a separate commercial license is available.
+
+For commercial licensing, support, or certification services:
+**cangorkemsu@gmail.com**
+
+## Contributing
+
+Contributions are welcome. Before submitting a pull request, please read
+[`CONTRIBUTING.md`](CONTRIBUTING.md) and sign the
+[Contributor License Agreement](CLA.md).
+
+---
+
 ## Links
 
 - **GitHub:** https://github.com/cagasolu/energy-transformer
 - **Hugging Face:** https://huggingface.co/cagasoluh/energy-transformer
 - **Zenodo:** https://doi.org/10.5281/zenodo.20779017
-
----
-
-## License
-
-GPLv3
