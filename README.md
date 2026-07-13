@@ -11,7 +11,7 @@ Selyne (Stable-Energy Lipschitz Net) introduces Gloeba, an energy-based attentio
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.svg)](https://doi.org/10.5281/zenodo.20779017)
 ![Python](https://img.shields.io/badge/python-3.10-blue)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange)
-![License](https://img.shields.io/badge/license-GPLv3-blue)
+![License](https://img.shields.io/badge/license-AGPLv3-blue)
 
 ---
 
@@ -265,9 +265,9 @@ The repository hosts the pretrained tied Gloeba and untied standard weights alon
 
 SELYNE is **dual-licensed**.
 
-**Open source (GPLv3).** Free to use, modify, and distribute under the terms of the GNU General Public License v3.0. If you distribute software that incorporates SELYNE, your work must also be released under GPLv3.
+**Open source (AGPLv3).** Free to use, modify, and distribute under the GNU Affero General Public License v3.0. Unlike the GPL, the AGPL also covers network use: if you run a modified version of SELYNE and let users interact with it over a network — via an API, a hosted service, or an inference endpoint — you must make the complete corresponding source code available to those users.
 
-**Commercial license.** If you cannot comply with GPLv3 — for example, if you need to embed SELYNE in a proprietary product, ship it in a closed-source device, or distribute it without releasing your own source — a separate commercial license is available.
+**Commercial license.** If you cannot comply with AGPLv3 — for example, if you want to serve SELYNE from a closed-source API, embed it in a proprietary product, or ship it in a closed device without releasing your own source — a separate commercial license is available.
 
 For commercial licensing, support, or certification services:
 **cangorkemsu@gmail.com**
