@@ -11,7 +11,7 @@ authors:
 version: "1.0.0"
 date-released: "2026-06-21"
 doi: "10.5281/zenodo.20779017"
-license: "GPL-3.0-or-later"
+license: "AGPL-3.0-or-later"
 url: "https://github.com/cagasolu/energy-transformer"
 repository-code: "https://github.com/cagasolu/energy-transformer"
 repository-artifact: "https://huggingface.co/cagasoluh/energy-transformer"
